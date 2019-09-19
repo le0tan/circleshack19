@@ -15,10 +15,14 @@
 
   <!-- Custom styles for this template -->
   <link href="css/scrolling-nav.css" rel="stylesheet">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7DkF6W3o8CZRq00hG5exG95mNBXA6KKg"></script>
+  <script src="js/map.js"></script>
+  <script src="js/searchBar.js"></script>
+  <script src="js/init.js"></script>
+  <link href="css/map.css" rel="stylesheet">
+  <link href="css/search.css" rel="stylesheet">
+</script>
 </head>
 
 <body id="page-top">
@@ -53,15 +57,23 @@
     </div>
   </header>
 
-  <section id="about">
+  <section id="explore">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <canvas id="mixchart" width="400" height="400"></canvas>
-          <button id="monthlyIncomeBtn">
-              Render
-          </button>        
-          <script src="js/chart.js"></script>
+          <div class="input-group mt-3 mb-3" id="search">
+            <div class="input-group-prepend">
+              <button type="button" id='search-type' class="btn btn-outline-secondary dropdown-toggle postal" data-toggle="dropdown">
+                Postal
+              </button>
+              <div class="dropdown-menu">
+                <button class="dropdown-item" id='search-type-alt'>Address</a>
+              </div>
+            </div>
+            <input type="text" id='user-input' class="form-control" placeholder="Enter postal code here">
+          </div>
+          <div id="map">
+          </div>
         </div>
       </div>
     </div>
@@ -72,8 +84,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2>Services we offer</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+            <canvas id="mixchart" width="400" height="400"></canvas>
+            <button id="monthlyIncomeBtn">
+                Render
+            </button>        
+            <script src="js/chart.js"></script>
         </div>
       </div>
     </div>
