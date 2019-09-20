@@ -47,10 +47,10 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Home</a>
+            <a class="nav-link js-scroll-trigger" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Explore</a>
+            <a class="nav-link js-scroll-trigger" href="#explore">Explore</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">About</a>
@@ -63,25 +63,24 @@
   <header class="bg-primary text-white">
     <div class="container text-center">
       <h1>Welcome to Economics Status Prediction</h1>
-      <p class="lead">A landing page template freshly redesigned for Bootstrap 4</p>
+      <p class="lead">Enter postal code or address for both actual and predicted income information</p>
     </div>
   </header>
 
   <section id="explore">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 mx-auto">
-          <div vertical layout>
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary">Monthly Income</button>
-              <button type="button" class="btn btn-secondary">Predicated Income</button>
-            </div>
-            <canvas id="mixchart" width="100" height="100"></canvas>
-            <script src="js/chart.js"></script>
+
+        <div class="col-lg-6 mx-auto">
+          <div class="column">
+            <canvas id="income-chart" width="100" height="50"></canvas>
+            <script src="js/income-chart.js"></script>
+            <canvas id="prediction-chart" width="100" height="50"></canvas>
+            <script src="js/prediction-chart.js"></script>
           </div>
         </div>
 
-        <div class="col-lg-8 mx-auto">
+        <div class="col-lg-6 mx-auto">
           <div class="input-group mt-3 mb-3" id="search">
             <div class="input-group-prepend">
               <button type="button" id='search-type' class="btn btn-outline-secondary dropdown-toggle postal"
@@ -102,28 +101,15 @@
     </div>
   </section>
 
-
-  <section id="services" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Services we offer</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita
-            quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore
-            ut velit dignissimos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="contact">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class="col-lg-12 mx-auto">
           <h2>Contact us</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor,
-            provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa
-            exercitationem, in, quo totam.</p>
+          <p class="lead">Huang Linghang:</p>
+          <p class="lead">Jiang Yuxin:</p>
+          <p class="lead">Tan Yuanhong: leotan.yh@gmail.com</p>
+          <p class="lead">Zhang Xiaoyu: zhang.gong.chang3@gmail.com</p>
         </div>
       </div>
     </div>
