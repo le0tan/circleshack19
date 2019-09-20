@@ -9,7 +9,7 @@ app.config["DEBUG"] = True
 
 @app.route('/', methods=['GET'])
 def home():
-    calc.from_postal_code_to_income_distribution(12345)
+    #calc.from_postal_code_to_income_distribution(12345)
     return render_template("index.html")
 
 @app.route('/api/v1/postal_code_to_income', methods=['GET'])
