@@ -9,7 +9,7 @@ function initMap() {
 	map.addListener('click', function(event){
 		if(marker!=null) marker.setMap(null);
 		marker = createMarker(map, event.latLng);
-	})
+	});
 }
 
 function createMarker(map, latLng) {
@@ -18,10 +18,10 @@ function createMarker(map, latLng) {
 			position: latLng,
 			map: map
 		});
-	createInfoWindow(map, marker);
+	//createInfoWindow(map, marker);
 	return marker;
 }
-
+/*
 function createInfoWindow(map, marker) {
 	geocoder.geocode( { 'location': marker.position}, function(results, status) {
       if (status == 'OK') {
@@ -34,4 +34,4 @@ function createInfoWindow(map, marker) {
         alert('Geocode was not successful for the following reason: ' + status);
       }
     });
-}
+}*/

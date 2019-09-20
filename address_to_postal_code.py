@@ -1,7 +1,7 @@
 import googlemaps
 from datetime import datetime
 
-gmaps = googlemaps.Client(key='AIzaSyB7DkF6W3o8CZRq00hG5exG95mNBXA6KKg')
+gmaps = googlemaps.Client(key='d')
 
 def get_postal_code_from_address(address: str, client: googlemaps.Client):
     return client.places(address)['results'][0]['formatted_address'][-6:]
