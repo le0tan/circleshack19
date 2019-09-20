@@ -12,7 +12,7 @@ def from_postal_code_to_income_distribution(code: int, ranging = 10):
     upper_bound = min(length, lower_bound+2*ranging)
     bar = df["income_pred"].iloc[lower_bound:upper_bound].value_counts()
     pred = df["income_pred"].iloc[target]
-    return {'Prediction': pred, "Distribution": bar}
+    return {'Prediction': pred, "Distribution": dict(bar)}
 
 # sample output
 # result = postal_code_to_incomes(234567,15)
