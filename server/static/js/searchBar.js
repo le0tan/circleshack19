@@ -1,8 +1,10 @@
 function initSearchBar() {
 	var searchBar = document.getElementById('search');
 	var searchTypeAlt = document.getElementById('search-type-alt');
-	searchTypeAlt.onclick = toggleSearchType;
-	var searchBtn = document.getElementById('search');
+	searchTypeAlt.onclick = function() {
+		toggleSearchType(searchBar);
+	};
+	var searchBtn = document.getElementById('searchBtn');
 	searchBtn.onclick = getIncomeFromPostalCode;
 }
 
@@ -29,7 +31,7 @@ function getIncomeFromPostalCode() {
 	var input = document.getElementById('user-input');
 	fetch("/api/v1/postal_code_to_income?postal_code="+input.value)
 	.then(function(response){
-		return response.json();
+		console.log(response);
 	})
 	.then(function(result) {
 		console.log(result);	

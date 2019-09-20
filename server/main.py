@@ -15,7 +15,7 @@ def home():
 @app.route('/api/v1/postal_code_to_income', methods=['GET'])
 def postal_code_to_income():
     if 'postal_code' in request.args:
-        return calc.from_postal_code_to_income_distribution(request.args['postal_code'])
+        return calc.from_postal_code_to_income_distribution(int(request.args['postal_code']))
     else:
         abort(400, "Please provide postal_code as an argument.")
 
