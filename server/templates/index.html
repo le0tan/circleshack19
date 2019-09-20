@@ -24,7 +24,7 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUYycCvHv-S-j8AjqjCw5Vva6NGAjSmdY"></script>
 
   <script src="{{ url_for('static',filename='js/map.js') }}"></script>
-  <script src="{{ url_for('static',filename='js.searchBar.js') }}"></script>
+  <script src="{{ url_for('static',filename='js/searchBar.js') }}"></script>
   <script src="{{ url_for('static',filename='js/init.js') }}"></script>
   <link href="{{ url_for('static',filename='css/map.css') }}" rel="stylesheet">
   <link href="{{ url_for('static',filename='css/search.css') }}" rel="stylesheet">
@@ -129,14 +129,14 @@
 
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static',filename='vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="{{ url_for('static',filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
   <!-- Custom JavaScript for this theme -->
-  <script src="js/scrolling-nav.js"></script>
+  <script src="{{ url_for('static',filename='js/scrolling-nav.js') }}"></script>
 
 </body>
 
