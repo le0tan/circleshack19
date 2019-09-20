@@ -10,11 +10,21 @@ def from_postal_code_to_income_distribution(code: int, ranging = 10):
     target = np.argmin(np.abs(code_lst - code))
     lower_bound = max(0, target-ranging)
     upper_bound = min(length, lower_bound+2*ranging)
-    bar = df["income_pred"].iloc[lower_bound:upper_bound].value_counts()
-    for key in bar.keys():
-    	bar[key]=int(bar[key])
+    #bar = df["income_pred"].iloc[lower_bound:upper_bound].value_counts()
+
+    #print(type(df["income_pred"].iloc[lower_bound:upper_bound]))
+    dic={}
+    sr = df["income_pred"].iloc[lower_bound:upper_bound]
+    for i in sr:
+    	if i in dic:
+    		dic[i]+=1
+    	else:
+    		dic[i]=1
+    #for key in bar.keys():
+    #	bar[key]=bar[key].item()
+    #	print('*',type(bar[key]))
     pred = df["income_pred"].iloc[target]
-    return {'Prediction': pred, "Distribution": dict(bar)}
+    return {'Prediction': pred, "Distribution": dic}
 
 # sample output
 #result = from_postal_code_to_income_distribution(234567,15)

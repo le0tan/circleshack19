@@ -31,7 +31,7 @@ function getIncomeFromPostalCode() {
 	var input = document.getElementById('user-input');
 	fetch("/api/v1/postal_code_to_income?postal_code="+input.value)
 	.then(function(response){
-		console.log(response);
+		return response.json();
 	})
 	.then(function(result) {
 		console.log(result);	
