@@ -34,6 +34,6 @@ function getIncomeFromPostalCode() {
 		return response.json();
 	})
 	.then(function(result) {
-		console.log(result);	
+		drawChart(result);
 	});
 }

@@ -24,3 +24,7 @@ var chart = new Chart(ctx, {
     },
     options: options
 });
+
+function drawChart(result){
+    
+}
