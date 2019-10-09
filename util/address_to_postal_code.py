@@ -2,7 +2,7 @@ import googlemaps
 from datetime import datetime
 import geopy.distance
 
-gmaps = googlemaps.Client(key='AIzaSyB7DkF6W3o8CZRq00hG5exG95mNBXA6KKg')
+gmaps = googlemaps.Client(key='this key is expired anyway')
 
 def get_postal_code_from_address(address: str, client: googlemaps.Client):
     return get_detail_from_address(address)['results'][0]['formatted_address'][-6:]
